@@ -1,0 +1,37 @@
+ ˛∫æ   2 µ  *com/example/khusboo1/translator/MainActivity  android/app/Activity txtSpeechInput Landroid/widget/TextView; btnSpeak Landroid/widget/ImageButton; REQ_CODE_SPEECH_INPUT I ConstantValue   d <init> ()V Code
+    	   	 
+ LineNumberTable LocalVariableTable this ,Linfo/androidhive/speechtotext/MainActivity; onCreate (Landroid/os/Bundle;)V
+      
+      setContentView (I)V	  
+  # $ % findViewById (I)Landroid/view/View; ' android/widget/TextView	  )  	  , android/widget/ImageButton	  .  
+  0 1 2 getActionBar ()Landroid/app/ActionBar;
+ 4 6 5 android/app/ActionBar 7  hide 9 ,info/androidhive/speechtotext/MainActivity$1
+ 8 ;  < /(Linfo/androidhive/speechtotext/MainActivity;)V
+ + > ? @ setOnClickListener &(Landroid/view/View$OnClickListener;)V savedInstanceState Landroid/os/Bundle; promptSpeechInput E android/content/Intent G &android.speech.action.RECOGNIZE_SPEECH
+ D I  J (Ljava/lang/String;)V L #android.speech.extra.LANGUAGE_MODEL N 	free_form
+ D P Q R putExtra >(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent; T android.speech.extra.LANGUAGE
+ V X W java/util/Locale Y Z 
+getDefault ()Ljava/util/Locale;
+ D \ Q ] B(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent; _ android.speech.extra.PROMPT 
+  b c d 	getString (I)Ljava/lang/String;
+  f g h startActivityForResult (Landroid/content/Intent;I)V
+  j k l getApplicationContext ()Landroid/content/Context; 
+ o q p android/widget/Toast r s makeText J(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+ o u v  show x )android/content/ActivityNotFoundException intent Landroid/content/Intent; a +Landroid/content/ActivityNotFoundException; StackMapTable onActivityResult (IILandroid/content/Intent;)V
+  Å ~  É android.speech.extra.RESULTS
+ D Ö Ü á getStringArrayListExtra )(Ljava/lang/String;)Ljava/util/ArrayList;
+ â ã ä java/util/ArrayList å ç get (I)Ljava/lang/Object; è java/lang/CharSequence
+ & ë í ì setText (Ljava/lang/CharSequence;)V requestCode 
+resultCode data result Ljava/util/ArrayList; LocalVariableTypeTable )Ljava/util/ArrayList<Ljava/lang/String;>; onCreateOptionsMenu (Landroid/view/Menu;)Z
+  û ü † getMenuInflater ()Landroid/view/MenuInflater;  
+ £ • § android/view/MenuInflater ¶ ß inflate (ILandroid/view/Menu;)V menu Landroid/view/Menu; access$0
+  ¨ C  
+SourceFile MainActivity.java InnerClasses ± !android/view/View$OnClickListener ≥ android/view/View OnClickListener !                 	 
+               =     *∑ *dµ ±              
+                     à     <*+∑ *∂ **!∂ "¿ &µ (***∂ "¿ +µ -*∂ /∂ 3*¥ -ª 8Y*∑ :∂ =±                  %   , " ; *        <       < A B   C      ‚     Gª DYF∑ HL+KM∂ OW+S∏ U∂ [W+^*`∂ a∂ OW*+d∂ eß M*∂ i*m∂ a∏ n∂ t±  * 1 4 w     B    0 
+ 1  2  1  3  4   5 & 4 * 7 1 8 5 9 9 : ? ; @ 9 C ; F =         G     
+ = y z  5  { |  }    ˇ 4   D  w  ~      »     >*-∑ Ä™      5   d   d   † -∆ -Ç∂ Ñ:*¥ (∂ à¿ é∂ ê±       "    D  F  H % J & K + J - L = R    4    >       > î 
+    > ï 
+    > ñ z  -  ó ò  ô     -  ó ö  }       õ ú     D     *∂ ù°+∂ ¢¨       
+    W 
+ X                ® ©  ™ <     %     *∑ ´±           /        ≠    Æ Ø     ∞ ≤ ¥	 8      

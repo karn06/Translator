@@ -1,0 +1,10 @@
+Êþº¾   2 (  ,com/example/khusboo1/translator/MainActivity$1  java/lang/Object  !android/view/View$OnClickListener this$0 ,Linfo/androidhive/speechtotext/MainActivity; <init> /(Linfo/androidhive/speechtotext/MainActivity;)V Code	    
+   	  ()V LineNumberTable LocalVariableTable this .Linfo/androidhive/speechtotext/MainActivity$1; onClick (Landroid/view/View;)V
+    *info/androidhive/speechtotext/MainActivity  
+ access$0 v Landroid/view/View; 
+SourceFile MainActivity.java EnclosingMethod " # onCreate (Landroid/os/Bundle;)V InnerClasses & android/view/View OnClickListener               	 
+     8     
+*+µ *· ±       
+      "        
+            @     *´ ¸ ±       
+    &  '                               ! $      % '	       
